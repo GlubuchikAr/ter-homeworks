@@ -69,8 +69,9 @@ provider "docker" {
   ssh_opts = ["-o", "StrictHostKeyChecking=no", "-o", "UserKnownHostsFile=/dev/null"]
 }
 ```
-4. и 6. 
-```terraform {
+4. и 6. [Финальный код](https://github.com/GlubuchikAr/ter-homeworks/blob/master/01/2/main.tf)
+```
+terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
@@ -126,3 +127,4 @@ resource "docker_container" "mysql-1" {
   ]
 }
 ```
+![env](https://github.com/GlubuchikAr/ter-homeworks/blob/master/01/2/env.png)
