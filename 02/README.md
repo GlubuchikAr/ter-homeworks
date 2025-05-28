@@ -5,4 +5,4 @@
 3. 
 4. В яндекс облаке нет platform_id (standard-v1 - Intel Cascade Lake, standard-v2 - Intel Ice Lake, standard-v3 - AMD EPYC), cores минимально 2.
 5. 
-6. 
+
