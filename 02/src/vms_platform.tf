@@ -1,0 +1,153 @@
+###vm_web vars
+
+variable "vm_web_family" {
+  type        = string
+  description = "image_family"
+  default     = "ubuntu-2004-lts"
+}
+
+variable "vm_web_name" {
+  type        = string
+  description = "instance_name"
+  default     = "netology-develop-platform-web"
+}
+
+variable "vm_web_platform_id" {
+  type        = string
+  description = "instance_platform_id"
+  default     = "standard-v1"
+}
+
+variable "vm_web_cores" {
+  type        = number
+  description = "instance_resources_cores"
+  default     = 2
+}
+
+variable "vm_web_memory" {
+  type        = number
+  description = "instance_resources_memory"
+  default     = 1
+}
+
+variable "vm_web_core_fraction" {
+  type        = number
+  description = "instance_resources_core_fraction"
+  default     = 5
+}
+
+variable "vm_web_disk_type" {
+  type        = string
+  description = "instance_disk_type"
+  default     = "network-hdd"
+}
+
+variable "vm_web_disk_size" {
+  type        = number
+  description = "instance_disk_size"
+  default     = 10
+}
+
+variable "vm_web_scheduling_policy" {
+  type        = bool
+  description = "instance_scheduling_policy"
+  default     = true
+}
+
+variable "vm_web_network_interface_nat" {
+  type        = bool
+  description = "instance_network_interface_nat"
+  default     = true
+}
+
+variable "vm_web_metadata_port_enable" {
+  type        = number
+  description = "instance_metadata_port_enable"
+  default     = 1
+}
+
+###vm_db vars
+
+variable "vm_db_family" {
+  type        = string
+  description = "image_family"
+  default     = "ubuntu-2004-lts"
+}
+
+variable "vm_db_name" {
+  type        = string
+  description = "instance_name"
+  default     = "netology-develop-platform-db"
+}
+
+variable "vm_db_platform_id" {
+  type        = string
+  description = "instance_platform_id"
+  default     = "standard-v1"
+}
+
+variable "vm_db_cores" {
+  type        = number
+  description = "instance_resources_cores"
+  default     = 2
+}
+
+variable "vm_db_memory" {
+  type        = number
+  description = "instance_resources_memory"
+  default     = 2
+}
+
+variable "vm_db_core_fraction" {
+  type        = number
+  description = "instance_resources_core_fraction"
+  default     = 20
+}
+
+variable "vm_db_disk_type" {
+  type        = string
+  description = "instance_disk_type"
+  default     = "network-hdd"
+}
+
+variable "vm_db_disk_size" {
+  type        = number
+  description = "instance_disk_size"
+  default     = 10
+}
+
+variable "vm_db_scheduling_policy" {
+  type        = bool
+  description = "instance_scheduling_policy"
+  default     = true
+}
+
+variable "vm_db_network_interface_nat" {
+  type        = bool
+  description = "instance_network_interface_nat"
+  default     = true
+}
+
+variable "vm_db_metadata_port_enable" {
+  type        = number
+  description = "instance_metadata_port_enable"
+  default     = 1
+}
+
+variable "vm_db_zone" {
+  type        = string
+  description = "instance_zone"
+  default     = "ru-central1-b"
+}
+
+variable "vm_db_cidr" {
+  type        = list(string)
+  default     = ["10.0.2.0/24"]
+  description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
+}
+
+variable "vm_db_subnet_name" {
+  type        = string
+  default     = "develop_db"
+  description = "VPC network & subnet name"
+}
