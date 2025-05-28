@@ -32,3 +32,4 @@
 ### Задание 6
 [vms_platform.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/02/src/vms_platform.tf)
 [1.auto.tfvars](https://github.com/GlubuchikAr/ter-homeworks/blob/master/02/src/1.auto.tfvars)
+
