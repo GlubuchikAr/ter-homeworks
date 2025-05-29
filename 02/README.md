@@ -81,3 +81,10 @@ variable "test" {
 "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117"```
 
 ### Задание 9
+Добавил 
+`resource "yandex_vpc_gateway" "nat_gateway"`
+`resource "yandex_vpc_route_table" "rt"`
+прописал `route_table_id = yandex_vpc_route_table.rt.id` в `resource "yandex_vpc_subnet" "develop_db"` и `resource "yandex_vpc_subnet" "develop"`
+отключил NAT
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/02/9-1.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/02/9-2.png)

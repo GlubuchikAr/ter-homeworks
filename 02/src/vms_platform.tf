@@ -57,7 +57,7 @@ variable "vm_web_scheduling_policy" {
 variable "vm_web_network_interface_nat" {
   type        = bool
   description = "instance_network_interface_nat"
-  default     = true
+  default     = false
 }
 
 # variable "vm_web_metadata_port_enable" {
@@ -125,7 +125,7 @@ variable "vm_db_scheduling_policy" {
 variable "vm_db_network_interface_nat" {
   type        = bool
   description = "instance_network_interface_nat"
-  default     = true
+  default     = false
 }
 
 # variable "vm_db_metadata_port_enable" {
