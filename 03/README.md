@@ -20,6 +20,7 @@
 ### Задание 5* (необязательное)
 Добавил ```output "info" ``` в `main.tf`
 [main.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/main.tf)
+
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/5-1.png)
 
 ### Задание 6* (необязательное)
@@ -28,3 +29,32 @@
 [hosts.tftpl](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/hosts.tftpl)
 
 ### Задание 7* (необязательное)
+```
+merge(
+local.vpc, 
+{ 
+subnet_ids = concat(
+slice(local.vpc.subnet_ids, 0, 2),
+slice(local.vpc.subnet_ids, 3, length(local.vpc.subnet_ids))),
+subnet_zones = concat( slice(local.vpc.subnet_zones, 0, 2),
+slice(local.vpc.subnet_zones, 3, length(local.vpc.subnet_zones)))
+})
+```
+```
+merge(local.vpc, {
+  subnet_ids   = [for i, x in local.vpc.subnet_ids : x if i != 2],
+  subnet_zones = [for i, x in local.vpc.subnet_zones : x if i != 2]
+})
+```
+
+### Задание 8* (необязательное)
+```
+[webservers]
+%{~ for i in webservers ~}
+${i["name"]} ansible_host=${i["network_interface"][0]["nat_ip_address"]} platform_id=${i["platform_id"]}
+%{~ endfor ~}
+```
+
+### Задание 9* (необязательное)
+[ for i in range(1, 97) : format("rc%02d", i) if !contains([0,7,8,9], i % 10) || i == 19 ]
+  
