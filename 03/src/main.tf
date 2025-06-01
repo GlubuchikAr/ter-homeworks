@@ -11,3 +11,29 @@ resource "yandex_vpc_subnet" "develop" {
 data "yandex_compute_image" "ubuntu" {
   family = var.vm_family
 }
+
+output "info" {
+  value = {
+    webservers = [
+    for web in yandex_compute_instance.web : {
+      name = web.name
+      id   = web.id
+      fqdn = web.fqdn
+    }
+  ],
+    dbervers = [
+    for db in yandex_compute_instance.db : {
+      name = db.name
+      id   = db.id
+      fqdn = db.fqdn
+    }
+  ],
+    storage = [
+    for storage in [yandex_compute_instance.storage] : {
+      name = storage.name
+      id   = storage.id
+      fqdn = storage.fqdn
+    }
+  ]
+  }
+}

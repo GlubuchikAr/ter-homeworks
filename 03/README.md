@@ -9,3 +9,17 @@
 5. ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/2-1.png)
 
 ### Задание 3
+[disk_vm.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/disk_vm.tf)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/3-1.png)
+
+### Задание 4
+[ansible.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/ansible.tf)
+[hosts.tftpl](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/hosts.tftpl)
+[hosts.ini](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/hosts.ini)
+
+### Задание 5* (необязательное)
+Добавил ```output "info" ``` в `main.tf`
+[main.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/main.tf)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/5-1.png)
+
+### Задание 6* (необязательное)

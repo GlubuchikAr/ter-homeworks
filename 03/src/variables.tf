@@ -90,7 +90,7 @@ variable "each_vm" {
       disk_type     = "network-hdd"
       disk_size     = 11
       preemptible   = true
-      nat           = true
+      nat           = false
       serial-port-enable = 1
     },
     {
@@ -101,7 +101,16 @@ variable "each_vm" {
       disk_type          = "network-hdd"
       disk_size          = 10
       preemptible        = true
-      nat                = true
+      nat                = false
       serial-port-enable = 1
     }]
+}
+
+variable "disk" {
+  type        = object({
+    disk_type           = string,
+    disk_size           = number
+    })
+  description = "disk"
+  default     = { disk_type = "network-hdd", disk_size = 1 }
 }

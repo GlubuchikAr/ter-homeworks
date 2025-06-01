@@ -1,0 +1,32 @@
+%{~ if length(webservers) > 0 ~}
+[webservers]
+
+%{~ for i in webservers ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat"] ? i["network_interface"][0]["nat_ip_address"] : i["network_interface"][0]["ip_address"]}  fqdn=${i["fqdn"]}
+
+%{~ endfor ~}
+%{ endif ~}
+
+%{~ if length(dbservers) > 0 ~}
+[dbservers]
+
+%{~ for i in dbservers ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat"] ? i["network_interface"][0]["nat_ip_address"] : i["network_interface"][0]["ip_address"]}  fqdn=${i["fqdn"]}
+
+%{~ endfor ~}
+%{ endif ~}
+
+%{~ if length(storage) > 0 ~}
+[storageservers]
+
+%{~ for i in storage ~}
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat"] ? i["network_interface"][0]["nat_ip_address"] : i["network_interface"][0]["ip_address"]}  fqdn=${i["fqdn"]}
+
+%{~ endfor ~}
+%{ endif ~}
+
+[all:vars]
+
+ansible_user=ubuntu
+ansible_ssh_private_key_file=~/.ssh/aglubuchik
+ansible_python_interpreter=/usr/bin/python3
