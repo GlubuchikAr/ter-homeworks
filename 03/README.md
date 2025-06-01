@@ -23,3 +23,8 @@
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/5-1.png)
 
 ### Задание 6* (необязательное)
+1. [ansible.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/ansible.tf)
+2. ```ansible_host=${i["network_interface"][0]["nat"] ? i["network_interface"][0]["nat_ip_address"] : i["network_interface"][0]["ip_address"]}```
+[hosts.tftpl](https://github.com/GlubuchikAr/ter-homeworks/blob/master/03/src/hosts.tftpl)
+
+### Задание 7* (необязательное)
