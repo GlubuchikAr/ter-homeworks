@@ -6,8 +6,15 @@
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/1-5.png)
 
 ### Задание 2
-[локальный модуль vpc \n](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/src/vpc)
+[локальный модуль vpc](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/src/vpc)
 
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/2-1.png)
 
-[документацию к модулю docs.md](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/src/vpc/docs.md)
+[документация к модулю docs.md](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/src/vpc/docs.md)
+
+### Задание 3
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-1.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-2.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-3.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-4.png)
+
