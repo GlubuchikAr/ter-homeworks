@@ -18,3 +18,9 @@
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-3.png)
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/3-4.png)
 
+### Задание 4*
+[модуль vpc main.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/src/vpc/main.tf)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/4-1.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/4-2.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/4-3.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/4-4.png)
