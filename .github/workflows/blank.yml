@@ -35,19 +35,64 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-name: TFLint Check
-on: [pull_request]
-
+name: Checkov
+on:
+  push:
+    branches:
+      - master
 jobs:
-  tflint:
+  build:
+
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: terraform-linters/setup-tflint@v3
-      - run: tflint --init
-      - run: tflint --format=json | tee tflint.json
-      - uses: reviewdog/action-tflint@v2
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review  # Оставляет комментарии в PR
-          fail_on_error: false
+          python-version: 3.8
+      - name: Test with Checkov
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: example/examplea
+          framework: terraform 
+
+name: Lint
+on:
+ push:
+ branches: [ master ]
+  pull_request:
+
+jobs:
+ tflint:
+ runs-on: ${{ matrix.os }}
+
+    strategy:
+ matrix:
+ os: [ubuntu-latest, macos-latest, windows-latest]
+
+    steps:
+ - uses: actions/checkout@v4
+      name: Checkout source code
+
+ - uses: actions/cache@v4
+      name: Cache plugin dir
+      with:
+ path: ~/.tflint.d/plugins
+        key: ${{ matrix.os }}-tflint-${{ hashFiles('.tflint.hcl') }}
+
+ - uses: terraform-linters/setup-tflint@v4
+      name: Setup TFLint
+      with:
+ tflint_version: v0.52.0
+ - name: Show version
+      run: tflint --version
+
+ - name: Init TFLint
+      run: tflint --init
+      env:
+ # https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/plugins.md#avoiding-rate-limiting
+        GITHUB_TOKEN: ${{ github.token }}
+
+ - name: Run TFLint
+      run: tflint -f compact
