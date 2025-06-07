@@ -13,9 +13,9 @@ checkov
 
 В [providers.tf](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/src/providers.tf) настроил хранение backend "s3" и dynamodb_table
 
-![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/2-1.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/2-1.png)
 
 игнорировать блокировку можно командой `terraform apply -lock=false`
 
 разблокировать блокировку можно командой `terraform force-unlock ID_блокировки`
-![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/04/2-2.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/2-2.png)
