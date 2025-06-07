@@ -10,10 +10,3 @@
 
 # own secret vars store.
 personal.auto.tfvars
-
-
-terraform.tfvars
-
-tfplan 
-
-04/src/mysql/*
