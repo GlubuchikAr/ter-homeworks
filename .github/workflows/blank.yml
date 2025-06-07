@@ -36,10 +36,7 @@ jobs:
           echo test, and deploy your project.
 
 name: Checkov
-on:
-  push:
-    branches:
-      - master
+on: [pull_request]
 jobs:
   build:
 
@@ -58,10 +55,7 @@ jobs:
           framework: terraform 
 
 name: Lint
-on:
- push:
- branches: [ master ]
-  pull_request:
+on: [pull_request]
 
 jobs:
  tflint:
