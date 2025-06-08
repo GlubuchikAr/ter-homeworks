@@ -19,3 +19,10 @@ checkov
 
 разблокировать блокировку можно командой `terraform force-unlock ID_блокировки`
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/2-2.png)
+
+### Задание 3
+https://github.com/GlubuchikAr/ter-homeworks/pull/5
+
+### Задание 4
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/4-1.png)
+![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/4-2.png)
