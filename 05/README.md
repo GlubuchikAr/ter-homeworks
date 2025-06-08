@@ -21,7 +21,7 @@ checkov
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/2-2.png)
 
 ### Задание 3
-https://github.com/GlubuchikAr/ter-homeworks/pull/5
+[PR для ревью](https://github.com/GlubuchikAr/ter-homeworks/pull/5)
 
 ### Задание 4
 ![](https://github.com/GlubuchikAr/ter-homeworks/blob/master/05/4-1.png)
