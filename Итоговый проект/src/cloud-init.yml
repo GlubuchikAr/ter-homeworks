@@ -1,0 +1,31 @@
+#cloud-config
+users:
+  - name: ubuntu
+    groups: sudo
+    shell: /bin/bash
+    sudo: [ALL=(ALL) NOPASSWD:ALL]
+    ssh_authorized_keys:
+      - ${ssh_public_key}
+package_update: true
+package_upgrade: false
+packages:
+  - ca-certificates
+  - curl
+  - git
+
+write_files:
+  - path: /etc/mysql-environment
+    content: |
+      MYSQL_DATABASE=${mysql_database}
+      MYSQL_HOST=${mysql_host}
+      MYSQL_USER=${mysql_user}
+      MYSQL_PASSWORD=${mysql_password}
+    owner: root:root
+    permissions: '0644'
+
+runcmd:
+  - mkdir -p /opt
+  - cd /opt && git clone https://github.com/GlubuchikAr/shvirtd-example-python.git
+  - cd /opt/shvirtd-example-python && ./docker.sh
+  - echo 'source /etc/mysql-environment' >> /etc/profile
+  - chmod 644 /etc/mysql-environment
